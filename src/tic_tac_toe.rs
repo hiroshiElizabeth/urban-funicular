@@ -87,11 +87,9 @@ mod board {
                     egui::FontId::new(30.0, egui::FontFamily::default()),
                     egui::Color32::WHITE,
                 );
-            } else {
-                if response.clicked() {
-                    let _ = self[(x, y)].insert(*next);
-                    *next = !*next;
-                }
+            } else if response.clicked() {
+                let _ = self[(x, y)].insert(*next);
+                *next = !*next;
             }
 
             painter.rect_stroke(

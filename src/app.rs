@@ -10,7 +10,8 @@ impl MainScreen {
         // `cc.egui_ctx.set_visuals` and `cc.egui_ctx.set_fonts`.
 
         Self {
-            games: [(true, Box::new(TicTacToe::default()))],
+            games: [(true, Box::<TicTacToe>::default())],
+            // games: [(true, Box::new(TicTacToe::default()))],
         }
     }
 }
