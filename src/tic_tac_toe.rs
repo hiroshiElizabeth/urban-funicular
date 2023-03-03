@@ -3,8 +3,8 @@ use crate::app::AppWindow;
 mod marker {
     use std::ops::Not;
 
-    const CIRCLE: &'static str = "⭕";
-    const CROSS: &'static str = "❌";
+    const CIRCLE: &str = "⭕";
+    const CROSS: &str = "❌";
 
     pub(super) const WIDGET_SIZE: egui::Vec2 = egui::Vec2::splat(30.0);
 
