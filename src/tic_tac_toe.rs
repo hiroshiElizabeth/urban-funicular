@@ -1,11 +1,7 @@
 use crate::app::AppWindow;
 
-use self::marker::Marker;
-
 mod marker {
     use std::ops::Not;
-
-    use egui::Shape;
 
     const CIRCLE: &'static str = "⭕";
     const CROSS: &'static str = "❌";
@@ -34,11 +30,11 @@ mod marker {
         }
     }
 
-    impl Into<&'static str> for Marker {
-        fn into(self) -> &'static str {
-            match self {
-                Self::First => CIRCLE,
-                Self::Second => CROSS,
+    impl From<Marker> for &str {
+        fn from(value: Marker) -> Self {
+            match value {
+                Marker::First => CIRCLE,
+                Marker::Second => CROSS,
             }
         }
     }
