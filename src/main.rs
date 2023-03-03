@@ -11,7 +11,7 @@ fn main() -> eframe::Result<()> {
     eframe::run_native(
         "mini games",
         native_options,
-        Box::new(|cc| Box::new(mini_games::MainScreen::new(cc))),
+        Box::new(|cc| Box::new(MainScreen::new(cc))),
     )
 }
 
@@ -30,7 +30,7 @@ fn main() {
         eframe::start_web(
             "the_canvas_id", // hardcode it
             web_options,
-            Box::new(|cc| Box::new(eframe_template::MainScreen::new(cc))),
+            Box::new(|cc| Box::new(MainScreen::new(cc))),
         )
         .await
         .expect("failed to start eframe");
